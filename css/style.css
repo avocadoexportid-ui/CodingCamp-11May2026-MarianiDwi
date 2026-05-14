@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --text: #222;
+  --secondary: #666;
+  --primary: #4f46e5;
+  --danger: #ef4444;
+  --border: #e5e7eb;
+}
+
+body.dark {
+  --bg: #111827;
+  --card: #1f2937;
+  --text: #f9fafb;
+  --secondary: #d1d5db;
+  --border: #374151;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  transition: 0.3s;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.balance-card {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.balance-card h2 {
+  margin-top: 8px;
+  font-size: 30px;
+}
+
+.theme-btn {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.form-section,
+.list-section,
+.chart-section,
+.sort-section {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.custom-category-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-category-wrapper button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+
+.section-title {
+  margin-bottom: 12px;
+}
+
+.transaction-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transaction-info h4 {
+  margin-bottom: 6px;
+}
+
+.transaction-info p {
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.highlight {
+  border: 2px solid #f59e0b;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  .balance-card h2 {
+    font-size: 24px;
+  }
+}
